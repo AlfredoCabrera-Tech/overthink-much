@@ -6,7 +6,7 @@ The idea of this app is to be a simple tool to give the user a clue as to which 
 
 **Live site URL:** https://viking-productivity-suite.netlify.app/
 
-[App Screenshot](/src/App%20Screenshot.png)
+![App Screenshot](/src/App%20Screenshot.png)
 
 ## Why Was This App Made
 
