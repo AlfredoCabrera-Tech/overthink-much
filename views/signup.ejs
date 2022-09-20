@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Are you actually an overthinker, or are you just anxious?">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Overthink Much? - Sign-Up</title>
+</head>
+<body>
+    <h1 class="signup__title">Overthink Much? - Sign-Up</h1>
+    <div class="signup__container">
+        <section class="signup__text-container">
+            <p>
+                Overthinking and anxiety are two of the most prevalent mental issues amongst people of all kinds. These conditions can take a heavy toll on our everyday lives, hindering our levels of productivity, interpersonal relationships and overall health.
+            </p>
+            <p>
+                One of the biggest misconceptions about overthinking and anxiety is thinking that they're the same thing. They're not. Even though they're similar, the origin of their manifestations are two different psychological places and, in consequence, not every approach when dealing with one is going to be appropriate for dealing with the other.
+            </p>
+            <p>
+                The developer of this app is not a licensed therapist, and this app is not designed to serve as any kind of treatment on any of these conditions. The idea of this app is merely to be a simple tool to give the user a clue as to which one of the mentioned conditions is most probable to be the cause of their mental overactivity; based on a basic test whose results will get more reliable the more people participate on it.
+            </p>
+        </section>
+        <section class="signup__form-container">
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>
+            <% } %>
+            <form class="signup__form" action="/signup" method="POST">
+                <input type="text" name="userName" placeholder="User Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="confirmPassword" placeholder="Confirm Password">
+                <input type="submit">
+            </form>
+            <a href="/">Go back</a>
+        </section>
+    </div>
+</body>
+</html>

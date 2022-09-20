@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Are you actually an overthinker, or are you just anxious?">
+    <title>Overthink Much? - Timer</title>
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1 class="timer-word__title">Overthink Much? - Timer</h1>
+    <div class="timer-word__container">
+        
+        <section class="timer-word__text">
+            <h2>
+                Hello, <%= user.userName %>!
+            </h2>
+            <p>Start the timer and write as many words as you can, starting with the letter 'T', within 2 minutes.</p>
+            <p> Then click on submit to see your results.</p>
+            
+            <form class="timer-word__form" action="/words/createWords" method='POST' id="timer-form">
+                <textarea name="listOfWords"cols="10"  rows="5" placeholder="Write as many words as you can..." class="listOfWords-input"></textarea>
+                <input class="submit-btn" type="submit">
+            </form>
+            <a href="/logout">Logout</a>
+        </section>
+
+        <section class="timer-word__timer-container">
+            <div id="timer">
+                <span id='minutes'>0</span>:<span id="seconds">00</span>
+            </div>
+            <div class="timer-word__btn-container">
+                <button class='start-button btn'>Start</button>
+                <button class='stop-button btn'>Stop</button>
+            </div>
+        </section>
+    </div>
+
+    
+    <script src="/js/main.js"></script>
+    <script src="/js/timer.js"></script>
+</body>
+</html>

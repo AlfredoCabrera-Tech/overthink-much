@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Are you actually an overthinker, or are you just anxious?">
+	<title>Overthink Much? - Results</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1 class="words__title">Overthink Much - Results</h1>
+	<div class="words__container">
+		
+		
+		<% wordsEntry.forEach( entry => { %>
+			<div class="words__your-words__results">
+				<h2><%= user.userName %>, your words were:</h2>
+				<ul>
+					<% if (entry.words.length!=0) { %>
+						<% entry.words.forEach(word => { %>
+							<li class='word' data-id='<%=entry._id%>'>
+								<%= word %>
+							</li>
+						<% }) %>
+						<h3>You wrote <%=entry.words.length %> words total.</h3>
+						<button class='del btn'> Delete </button>
+					<% } %>
+				</ul>
+				<a href="/logout">Logout</a>
+			</div>
+		<% }) %>
+		<section class="words__your-words__global">
+	
+			<h2>Global results</h2>
+			<div>
+				<% for( let i = 0; i < globalEntries.length; i++ ) { %>
+					<p><b>
+						
+							<%= everyName[i].userName %> posted <%= globalEntries[i].words.length %> words:
+					</b>
+						<br />
+					<%= globalEntries[i].words %>
+					</p>
+				<% } %>
+				<p class="average">And the global average of words submitted is: <h1 class="average-container"><%= average %></h1>  </p>
+			</div>
+			<div class="results">
+				<% if (wordsEntry[0].words.length > average ) { %>
+					<p>Your results are <span class="above-below">ABOVE</span> average. </p>
+					<p>
+						This might be and indication that you're actually overthinking because of a rather excacerbated verbal intelect. 
+					</p>
+					<p>
+						<a href="https://www.psychologytoday.com/us/blog/out-the-ivory-tower/201905/9-strategies-overcoming-overthinking">Here</a> is some information about dealing with overthinking that could be useful to you.
+
+					</p>
+					<% } if(wordsEntry[0].words.length < average ){ %>
+						<p>Your results are <span class="above-below">BELOW</span> average.</p>
+						<p>
+							This might be and indication that you're actually experiencing anxiety instead of overthinking.
+						</p>
+						<p>
+							<a href="https://www.psychologytoday.com/us/basics/anxiety/treatment-anxiety">Here</a> is some information about dealing with anxiety that could be useful to you.
+						</p>
+				<% } if(wordsEntry[0].words.length === average ){ %>
+						<p>Your results are average.</p>
+						<p>
+							This might be and indication that you're actually experiencing anxiety instead of overthinking.
+						</p>
+						<p>
+							<a href="https://www.psychologytoday.com/us/basics/anxiety/treatment-anxiety">Here</a> is some information about dealing with anxiety that could be useful to you.
+						</p>
+				<% } %>
+				</div>
+		</section>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
