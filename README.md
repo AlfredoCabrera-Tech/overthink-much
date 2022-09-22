@@ -6,11 +6,8 @@ The idea of this app is to be a simple tool to give the user a clue as to which 
 
 **Live site URL:** https://overthink-much.onrender.com
 
-<<<<<<< HEAD
-![App Screenshot](/src/App%20Screenshot.png)
-=======
+
 ![App Screenshot](/App%20Screenshot.png)
->>>>>>> e37aa31c3d416792ffae5e4f7d09093eb593d773
 
 ## Why Was This App Made
 
