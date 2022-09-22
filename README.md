@@ -4,7 +4,7 @@ Overthinking and anxiety are two of the most prevalent mental issues amongst peo
 
 The idea of this app is to be a simple tool to give the user a clue as to which one of the mentioned conditions is most probable to be the cause of their mental overactivity; based on a basic test whose results will get more reliable the more people participate on it.
 
-**Live site URL:** https://viking-productivity-suite.netlify.app/
+**Live site URL:** https://overthink-much.onrender.com
 
 ![App Screenshot](/src/App%20Screenshot.png)
 
